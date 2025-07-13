@@ -121,6 +121,48 @@
         height: 400px;
       }
     }
+  .countdown-container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin: 2rem auto;
+    max-width: 500px;
+    font-family: 'Noto Serif Bengali', serif;
+  }
+
+  .countdown-container h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #2c3e50;
+  }
+
+  #countdown {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  #countdown div {
+    flex: 1;
+    background: #ecf0f1;
+    border-radius: 10px;
+    padding: 1rem;
+  }
+
+  #countdown span {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e74c3c;
+  }
+
+  #countdown label {
+    font-size: 0.9rem;
+    color: #555;
+  }
+    
   </style>
 </head>
 <body>
@@ -138,20 +180,30 @@
 <div class="featured-image-box">
   <img src="https://i.ibb.co/93p7ZYLZ/20250713-220835-0000.jpg" alt="নাবিল এক্সপোজ ছবি">
 </div>
+
+    <div class="countdown-container">
+  <h2>এক্সপোজ শুরু হবে...</h2>
+  <div id="countdown">
+    <div><span id="days">--</span><label>দিন</label></div>
+    <div><span id="hours">--</span><label>ঘন্টা</label></div>
+    <div><span id="minutes">--</span><label>মিনিট</label></div>
+    <div><span id="seconds">--</span><label>সেকেন্ড</label></div>
+  </div>
+</div>
     
-<!-- Image Section -->
+<!--
     <div style="margin-top: 3rem;">
       <div class="section-title">নাবিলের চান্স পাওয়ার পর তার দাবিকরা এবং কিছু বিষয়ের স্ক্রিনশট</div>
       <div class="image-list" id="imageList"></div>
     </div>
     
-    <!-- PDF Section -->
+    
     <div>
       <div class="section-title">পিডিএফ ডকুমেন্ট</div>
       <div class="pdf-list" id="pdfList"></div>
     </div>
 
-    
+    -->
 
   </div>
 
@@ -201,6 +253,32 @@
       imageList.appendChild(wrapper);
     });
   </script>
+  <script>
+  const targetDate = new Date("2025-07-15T00:00:00").getTime(); // Set your target date/time
+
+  const updateCountdown = () => {
+    const now = new Date().getTime();
+    const gap = targetDate - now;
+
+    const second = 1000,
+          minute = second * 60,
+          hour = minute * 60,
+          day = hour * 24;
+
+    const d = Math.floor(gap / day);
+    const h = Math.floor((gap % day) / hour);
+    const m = Math.floor((gap % hour) / minute);
+    const s = Math.floor((gap % minute) / second);
+
+    document.getElementById("days").innerText = d;
+    document.getElementById("hours").innerText = h;
+    document.getElementById("minutes").innerText = m;
+    document.getElementById("seconds").innerText = s;
+  };
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown(); // Initial call
+</script>
 
 </body>
 </html>
