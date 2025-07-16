@@ -224,7 +224,46 @@
 .site-footer p {
   margin: 0;
   letter-spaci
+} 
+.read-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
 
+.popup-content {
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  position: relative;
+  font-family: 'Noto Serif Bengali', serif;
+  font-size: 1.1rem;
+  animation: popup-fade 0.4s ease;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #e74c3c;
+}
+
+@keyframes popup-fade {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
 
   </style>
 </head>
@@ -243,6 +282,12 @@
 </div>
 
 
+<div class="read-popup" id="readPopup">
+  <div class="popup-content">
+    <span class="close-btn" onclick="document.getElementById('readPopup').style.display='none'">✖</span>
+    <p>⚠️ অনুগ্রহ করে সম্পূর্ণ লেখাটি পড়বেন তাহলে বিষয়টি স্পষ্ট হবে </p>
+  </div>
+</div>
 
 
     
@@ -262,7 +307,7 @@
 <br>
 <div class="highlight"> তারপরেও আপনাদের যদি বিশ্বাস না হয় এবং নাবিল যদি সত্যিই চান্স পেয়ে থাকে সাবজেক্ট পেয়ে থাকে তাহলে ওর সাহস থাকলে ওর রেজাল্ট সকলকে দেখাতে বলুন। সে প্রমাণ করে দিক সে সাবজেক্ট পেয়েছিলো। যদি প্রমাণ করতে পারে তাহলে আমরা যারা অনুসন্ধান করেছি তারা প্রকাশ্যে ক্ষমা চাইবো। </div>
 <br><br>
-চান্স না পেয়ে এখন সর্বশেষ আনন্দ মোহনে ভর্তি হয়েছে।
+<div class="highlight"> চান্স না পেয়ে এখন সর্বশেষ আনন্দ মোহনে ভর্তি হয়েছে। </div>
 <br><br>
  দেখুন সে কত বড় মিথ্যাবাদী। সকল কিছু বুঝতে হলে নিচের দেখানো ছবি পর্যবেক্ষণ করুন। এমন বড় ধোকাবাজি সে সকলের সাথে করেছে শুধুমাত্র সামান্য একটি পাবলিকিয়ান পরিচয় এর জন্য। নিজেকে সকলের মাঝে পাবলিকিয়ান বলে সে উপস্থাপন করতো এতোদিন। সে সামান্য এই পাবলিকিয়ান সাজার জন্য কত বড় মিথ্যা নাটক সাজিয়েছিলো। 
 <br><br>
