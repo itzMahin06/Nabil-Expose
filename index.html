@@ -1,1 +1,428 @@
-<p>Hi</p>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>নাবিল এক্সপোজ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Noto Serif Bengali', serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+
+    header {
+      background-color: #1c2833;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 1.5rem;
+    }
+
+    .description {
+      background-color: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      text-align: justify;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    .pdf-list, .image-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .pdf-item, .image-item {
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    .pdf-title, .image-title {
+      padding: 1rem;
+      background-color: #ecf0f1;
+      font-weight: bold;
+    }
+
+    .pdf-frame-wrapper {
+      position: relative;
+      width: 100%;
+      height: 600px;
+    }
+
+    .pdf-frame {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 40px;
+  background: white; /* Or match your background */
+  z-index: 5;
+  pointer-events: none;
+}
+
+
+    .image-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+.featured-image-box {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.featured-image-box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.featured-image-box img:hover {
+  transform: scale(1.02);
+}
+
+    @media (max-width: 768px) {
+      .pdf-frame-wrapper {
+        height: 400px;
+      }
+    }
+  .countdown-container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin: 2rem auto;
+    max-width: 500px;
+    font-family: 'Noto Serif Bengali', serif;
+  }
+
+  .countdown-container h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #2c3e50;
+  }
+
+  #countdown {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  #countdown div {
+    flex: 1;
+    background: #ecf0f1;
+    border-radius: 10px;
+    padding: 1rem;
+  }
+
+  #countdown span {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e74c3c;
+  }
+
+  #countdown label {
+    font-size: 0.9rem;
+    color: #555;
+  }
+
+    .highlight {
+  background-color: #ffeaa7;
+  color: #d63031;
+  font-weight: bold;
+  padding: 0.2em 0.4em;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(255, 105, 97, 0.4);
+}
+.title-card {
+  background: linear-gradient(135deg, #ff9ff3, #feca57);
+  color: #2d3436;
+  font-weight: bold;
+  padding: 1.2rem 1rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+.scam-alert {
+  background: #ff6b6b;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 600px;
+  position: relative;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+  }
+}
+
+    .site-footer {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: #ecf0f1;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 1rem;
+  margin-top: 3rem;
+  border-top: 4px solid #e74c3c;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.site-footer p {
+  margin: 0;
+  letter-spaci
+} 
+.read-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  position: relative;
+  font-family: 'Noto Serif Bengali', serif;
+  font-size: 1.1rem;
+  animation: popup-fade 0.4s ease;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #e74c3c;
+}
+
+@keyframes popup-fade {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>নাবিল এক্সপোজ</h1>
+  </header>
+
+  <div class="container">
+    
+    
+      <div class="title-card">
+  এই এক্সপোজ এমন কিছু তথ্য উন্মোচন করবে<br>
+  যা আগে কেউ জানতো না।
+</div>
+
+
+<div class="read-popup" id="readPopup">
+  <div class="popup-content">
+    <span class="close-btn" onclick="document.getElementById('readPopup').style.display='none'">✖</span>
+    <p>⚠️ অনুগ্রহ করে সম্পূর্ণ লেখাটি পড়বেন তাহলে বিষয়টি স্পষ্ট হবে </p>
+  </div>
+</div>
+
+
+    
+<div class="description">
+<div class="section-title"> বিস্তারিত ঘটনা </div> 
+<div class="scam-alert"> নাবিল সত্যিই কি জগন্নাথ বিশ্ববিদ্যালয়ে চান্স পেয়েছে নাকি সেটা ছিলো সম্পূর্ণ মিথ্যা বানোয়াট গল্প? বিস্তারিত জানুন নিচে: </div>
+<br>
+জগন্নাথ বিশ্ববিদ্যালয়ে চান্স হয়েছে এমন খবর ফেসবুক সহ সবাইকে বলে বলে বেড়িয়েছে সে। কিন্তু পরবর্তীতে জগন্নাথ বিশ্ববিদ্যালয়ের ক্লাস ২২ জুন থেকে শুরু হলেও নাবিল ভার্সিটিতে যায়না। সেখান থেকেই সন্দেহ শুরু হয় এবং আমাদের অনুসন্ধান শুরু হয়।
+<br><br>
+<div class="highlight"> অনেকেই বলবেন সেতো মেরিট পজিশন পেয়েছিলো (২৬৫, ৩১৯) কিন্তু আপনারা জেনে থাকবেন যে শুধু মেরিট পজিশন পেলেই হয় না যতগুলো সিট থাকে তার মধ্যে মেরিট পজিশন হলে সেটাকে বলা হয় চান্স। এরপরেও অনেকেই ভর্তি বাতিল করার পরিপ্রেক্ষিতে পরবর্তী মেরিটের পরীক্ষার্থীরা ভর্তির সুযোগ পায়। কিন্তু জগন্নাথ বিশ্ববিদ্যালয়ে এখন পর্যন্ত ৮টি মাইগ্রেশানের ফলাফল হওয়ার পরও ১৫০ মেরিট পার হয়নি। যেখানে ওর পজিশন ২৫০+ যেখানে সাবজেক্ট পাওয়া আদৌ সম্ভব না। কিন্তু নাবিল ৩য় মাইগ্রেশনের পরে সকলকে জানাই সে এনট্রোপলজি সাবজেক্ট পেয়েছে। যেটা সম্পূর্ণ ভুয়া ও মিথ্যা। সে যদি সত্যিই সাবজেক্ট পেয়ে থাকে তাহলে সে জুনের ২২ তারিখে তার অরিয়েন্টেশন ক্লাস বাদ দিয়ে মেলান্দহতে থাকতো না। আপনারা অনলাইনে খোঁজ নিলে এই বিষয়টি জানবেন। </div> 
+<br><br>
+সে এতোদিন সকলকে নিজেকে পাবলিকিয়ান, জগন্নাথ বিশ্ববিদ্যালয়ের ছাত্র বলে পরিচয় দিয়েছে। 
+<br>
+আরো একটি কথা, সে চান্স পেয়েছিলো এমন একটা ফেসবুক স্ট্যাটাস ও দিয়েছিলো কিন্তু পরবর্তীতে সে সেটা ডিলিট করে দেয়। 
+<br><br>
+সে এতোদিন পুরো মেলান্দহ বাসির সাথে স্ক্যাম করেছে।
+<br>
+<div class="highlight"> তারপরেও আপনাদের যদি বিশ্বাস না হয় এবং নাবিল যদি সত্যিই চান্স পেয়ে থাকে সাবজেক্ট পেয়ে থাকে তাহলে ওর সাহস থাকলে ওর রেজাল্ট সকলকে দেখাতে বলুন। সে প্রমাণ করে দিক সে সাবজেক্ট পেয়েছিলো। যদি প্রমাণ করতে পারে তাহলে আমরা যারা অনুসন্ধান করেছি তারা প্রকাশ্যে ক্ষমা চাইবো। </div>
+<br><br>
+<div class="highlight"> চান্স না পেয়ে এখন সর্বশেষ আনন্দ মোহনে ভর্তি হয়েছে। </div>
+<br><br>
+ দেখুন সে কত বড় মিথ্যাবাদী। সকল কিছু বুঝতে হলে নিচের দেখানো ছবি পর্যবেক্ষণ করুন। এমন বড় ধোকাবাজি সে সকলের সাথে করেছে শুধুমাত্র সামান্য একটি পাবলিকিয়ান পরিচয় এর জন্য। নিজেকে সকলের মাঝে পাবলিকিয়ান বলে সে উপস্থাপন করতো এতোদিন। সে সামান্য এই পাবলিকিয়ান সাজার জন্য কত বড় মিথ্যা নাটক সাজিয়েছিলো। 
+<br><br>
+সবাই পোস্টটি শেয়ার করে ওর বাটপারি, ভুয়া মিথ্যা স্ক্যাম ধরিয়ে দিন এবং সে যেনো প্রকাশ্যে ক্ষমা চাই তার এই বাটপারির জন্য সে আহবান রইলো।
+<br><br>
+<div class="highlight"> অনেকেই প্রশ্ন করতে পারেন "ঐ চান্স পায় নাই, মিথ্যা বলছে, তাতে তোদের কি? "। এটার উত্তর হচ্ছে: চান্স পাওয়ার মিথ্যা দাম্ভিকতায় সে অন্য শিক্ষার্থীদের অপমান করেছে। যারা চান্স পায়নি তাদের সাথে খোটা দিয়ে কথা বলেছে। যেকোনো গ্রুপ এ সে নিজেকে পাবলিকিয়ান ভেবে অন্যান্য দের ছোট করে কথা বলেছে যা একজন এডমিশন ক্যান্ডিডেট এর জন্য মারাত্মক মানসিক কষ্টদায়ক ব্যাপার। যারা এই স্টেজে ছিলেন তারা হয়তো বুঝবেন। </div>
+<br><br>
+আমরা সমস্ত ডকুমেন্টস মানে নাবিলের আনন্দ মোহনের ভর্তির পেমেন্ট স্লিপ, আবেদন ফরম, কলেজ কর্তৃপক্ষের এপ্রুভাল সমস্ত কিছু নিচে দিচ্ছি। আপনারা দেখুন।
+
+</div>
+    
+<div class="featured-image-box">
+  <img src="https://i.ibb.co/93p7ZYLZ/20250713-220835-0000.jpg" alt="নাবিল এক্সপোজ ছবি">
+</div>
+
+    
+    
+
+    <div style="margin-top: 3rem;">
+      <div class="section-title">নাবিলের চান্স পাওয়ার পর তার দাবিকরা এবং কিছু বিষয়ের স্ক্রিনশট</div>
+      <div class="image-list" id="imageList"></div>
+    </div>
+    
+    
+    <div>
+      <div class="section-title">পিডিএফ ডকুমেন্ট</div>
+      <div class="pdf-list" id="pdfList"></div>
+    </div>
+
+   
+
+  </div>
+
+  
+
+
+  <script>
+    // ✅ PDF list - Replace IDs with your own
+    const pdfs = [
+      { title: "আনন্দ মোহনে ভর্তি নিশ্চায়নের পিডিএফ", id: "12CbV7h6j9Ymj_5qgmjL_ShSGdjIFHig1" },
+      { title: "ভর্তির আবেদন ফির পেমেন্ট স্লিপ", id: "1wf_JJf7OBJ1wnGR3jNT7_KAdwjJkz4ws" },
+      { title: "কলেজ কর্তৃপক্ষের ভর্তি এপ্রুভালের স্ক্রিনশট", id: "1gvzDLBx9ttqP4PJNU5HPTW-Cxfs8V3-C"},
+      {title: "অফিসিয়াল স্টুডেন্ট প্রোফাইল", id: "1gxSaTKDWSJ-RwINAy7EyDpEQY9yB4Nna"}
+
+      
+    ];
+
+    // ✅ Image list - Add your image links and titles here
+    const images = [
+    { title: "নাবিলের চান্স পাওয়ার মিথ্যা আবেগঘন পোস্ট যেটা তার প্রোফাইলে এখন আর নেই", url: "https://i.ibb.co/MD4WdhMH/received-1445155046513784-1.jpg"},
+      { title: "স্ক্যাম ছড়ানির পরে তার এক ভাইয়ের ফেসবুক পোস্ট", url: "https://i.ibb.co/2YdLL9d7/Screenshot-20250713-211116.jpg" },
+      { title: "মেসেঞ্জারে স্ক্যাম করার স্ক্রিনশট", url: "https://i.ibb.co/r2bxrZzb/Messenger-creation-519-C8539-FC94-4505-925-B-3-D4-A7-A7-C4-EC8.jpg" },
+      { title: "ফেসবুকে নাবিলের আম্মুর চান্স পাওয়ার পোস্ট", url: "https://i.ibb.co/CsBGmHDg/received-2272281506544035.jpg"},
+      {title: "গ্রুপে একজনকে সরাসরি অপমানের স্ক্রিনশট", url: "https://i.ibb.co/ks9NKMnh/received-1239056904364093-1.jpg"}
+    
+    ];
+
+    const pdfList = document.getElementById("pdfList");
+    const imageList = document.getElementById("imageList");
+
+    // ✅ Render PDFs
+    pdfs.forEach(pdf => {
+      const wrapper = document.createElement("div");
+      wrapper.className = "pdf-item";
+
+      wrapper.innerHTML = `
+        <div class="pdf-title">${pdf.title}</div>
+        <div class="pdf-frame-wrapper">
+          <iframe class="pdf-frame" src="https://drive.google.com/file/d/${pdf.id}/preview" allow="autoplay"></iframe>
+          <div class="overlay"></div>
+        </div>
+      `;
+
+      pdfList.appendChild(wrapper);
+    });
+
+    // ✅ Render Images
+    images.forEach(img => {
+      const wrapper = document.createElement("div");
+      wrapper.className = "image-item";
+
+      wrapper.innerHTML = `
+        <div class="image-title">${img.title}</div>
+        <img src="${img.url}" alt="${img.title}">
+      `;
+
+      imageList.appendChild(wrapper);
+    });
+  </script>
+  <script>
+  const targetDate = new Date("2025-07-15T00:00:00").getTime(); // Set your target date/time
+
+  const updateCountdown = () => {
+    const now = new Date().getTime();
+    const gap = targetDate - now;
+
+    const second = 1000,
+          minute = second * 60,
+          hour = minute * 60,
+          day = hour * 24;
+
+    const d = Math.floor(gap / day);
+    const h = Math.floor((gap % day) / hour);
+    const m = Math.floor((gap % hour) / minute);
+    const s = Math.floor((gap % minute) / second);
+
+    document.getElementById("days").innerText = d;
+    document.getElementById("hours").innerText = h;
+    document.getElementById("minutes").innerText = m;
+    document.getElementById("seconds").innerText = s;
+  };
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown(); // Initial call
+</script>
+
+</body>
+</html>
