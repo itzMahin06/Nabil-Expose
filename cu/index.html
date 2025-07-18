@@ -1,0 +1,332 @@
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Noto Serif Bengali', serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+
+    header {
+      background-color: #1c2833;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 1.5rem;
+    }
+
+    .description {
+      background-color: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      text-align: justify;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    .pdf-list, .image-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .pdf-item, .image-item {
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    .pdf-title, .image-title {
+      padding: 1rem;
+      background-color: #ecf0f1;
+      font-weight: bold;
+    }
+
+    .pdf-frame-wrapper {
+      position: relative;
+      width: 100%;
+      height: 600px;
+    }
+
+    .pdf-frame {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 40px;
+  background: white; /* Or match your background */
+  z-index: 5;
+  pointer-events: none;
+}
+
+
+    .image-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+.featured-image-box {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.featured-image-box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.featured-image-box img:hover {
+  transform: scale(1.02);
+}
+
+    @media (max-width: 768px) {
+      .pdf-frame-wrapper {
+        height: 400px;
+      }
+    }
+  .countdown-container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin: 2rem auto;
+    max-width: 500px;
+    font-family: 'Noto Serif Bengali', serif;
+  }
+
+  .countdown-container h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #2c3e50;
+  }
+
+  #countdown {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  #countdown div {
+    flex: 1;
+    background: #ecf0f1;
+    border-radius: 10px;
+    padding: 1rem;
+  }
+
+  #countdown span {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e74c3c;
+  }
+
+  #countdown label {
+    font-size: 0.9rem;
+    color: #555;
+  }
+
+    .highlight {
+  background-color: #ffeaa7;
+  color: #d63031;
+  font-weight: bold;
+  padding: 0.2em 0.4em;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(255, 105, 97, 0.4);
+}
+.title-card {
+  background: linear-gradient(135deg, #ff9ff3, #feca57);
+  color: #2d3436;
+  font-weight: bold;
+  padding: 1.2rem 1rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+.scam-alert {
+  background: #ff6b6b;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 600px;
+  position: relative;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+  }
+}
+
+    .site-footer {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: #ecf0f1;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 1rem;
+  margin-top: 3rem;
+  border-top: 4px solid #e74c3c;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.site-footer p {
+  margin: 0;
+  letter-spaci
+} 
+.read-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  position: relative;
+  font-family: 'Noto Serif Bengali', serif;
+  font-size: 1.1rem;
+  animation: popup-fade 0.4s ease;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #e74c3c;
+}
+
+@keyframes popup-fade {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+    </style>
+
+      <header>
+    <h1>নাবিল এক্সপোজ</h1>
+  </header>
+
+  <div class="container">
+    
+    
+      <div class="title-card">
+  এই এক্সপোজ এমন কিছু তথ্য উন্মোচন করবে<br>
+  যা আগে কেউ জানতো না।
+</div>
+
+
+<div class="read-popup" id="readPopup">
+  <div class="popup-content">
+    <span class="close-btn" onclick="document.getElementById('readPopup').style.display='none'">✖</span>
+    <p>⚠️ অনুগ্রহ করে সম্পূর্ণ লেখাটি পড়বেন তাহলে বিষয়টি স্পষ্ট হবে </p>
+  </div>
+</div>
+
+    <div class="description">
+<div class="section-title"> বিস্তারিত ঘটনা </div> 
+<div class="scam-alert"> নাবিলের চট্টগ্রাম বিশ্ববিদ্যালয়ের রেজাল্টও মিথ্যা, সেগুলোর প্রমাণ নিচে দেওয়া হলোঃ  </div>
+
+     <div class="highlight"> নাবিল এবং নাবিলের আম্মুর ফেসবুক পোস্টের মাধ্যমে জানায় নাবিল চট্টগ্রাম বিশ্ববিদ্যালয়ের B ইউনিটে ২১৮৩ তম স্থান অর্জন করে। সেই পোস্টের স্ক্রিনশট নিচে দেওয়া হলোঃ </div>
+<br> <br>
+      <div style="margin-top: 3rem;">
+      
+      <div class="image-list"> 
+       <div class="image-title">নাবিলের আম্মুর ফেসবুক পোস্টে স্পষ্ট উল্লেখ্য করা হয়েছে মেরিট পজিশন</div>
+        <img src="https://i.ibb.co/tpqwp4js/orca-image-307520927-jpeg-1.jpg" alt="">
+      </div>
+    </div>
+<br> <br>
+      পরবর্তীতে আমারা অনুসন্ধান শুরু করি। চট্টগ্রাম বিশ্ববিদ্যালয়ের এডমিশন ওয়েবসাইটে (যেখানে সকল ইউনিটের প্রাথমিক, মাইগ্রেশন সকল ধরনের ফলাফল আছে) B ইউনিটের সকল পিডিএফ বিশ্লেষণ করতে শুরু করি।
+      <br> <br>
+      সেখানে আমরা B ইউনিটের <b>"সরাসরি স্বাক্ষাৎকারে খালি আসনে নির্বাচিত প্রার্থীদের তালিকা"</b> এই সেকশনের পিডিএফ পর্যবেক্ষণ করে আসল সত্য উদঘাটন করতে সক্ষম হয়। সেখানে আমরা দেখতে পারি ২১৮৩ তম মেরিট করেছেন যিনি সে নাবিল নয়। নিচে তার ইনফরমেশন দেওয়া হলো। সেই সাথে ওয়েবসাইট লিংক, পিডিএফ তথ্য দেওয়া হলো:
+      <br> <br>
+      <div style="margin-top: 3rem;">
+      
+      <div class="image-list"> 
+       <div class="image-title"> ২১৮৩ তম ব্যক্তির তথ্যঃ <br> Serial: 296 <br>
+Unit Roll: 203421 <br>
+Name: RUDRAMOY BARUA <br>
+Merit Position: 2183 <br>
+HSC Group: Humanities <br> </div>
+        <img src="https://i.ibb.co/nqdzBr1c/Screenshot-20250717-160927.jpg" alt="">
+      </div>
+    </div>
+<br> <br> 
+      উপরোক্ত পিডিএফ টি নিচে দেওয়া হলো: আপনারাও চেক করুন।
+      <br>
+      পিডিএফ এর ১০ নাম্বার পাতায় আছে।
+      <br> <br> 
+      <div class="pdf-list">
+
+
+        <div class="pdf-frame-wrapper">
+          <iframe class="pdf-frame" src="https://drive.google.com/file/d/1GGM88WIKu0pKVNAKZphflCgrhwDDK2j0/preview" allow="autoplay"></iframe>
+          
+        </div>
+        
+      </div>
+
+<br> 
+      ওয়েবসাইট থেকে দেখতে নিচের লিংক এ ক্লিক করু। <br>
+      <a href="https://ictcell.cu.ac.bd/result24-25/">https://ictcell.cu.ac.bd/result24-25/</a>
+      
+    </div>
+
+      
