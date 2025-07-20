@@ -317,6 +317,27 @@
   color: #333;
   font-family: 'Noto Serif Bengali', serif;
 }
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 25px;
+  z-index: 100;
+  background: #6c5ce7;
+  color: white;
+  border: none;
+  padding: 0.8rem 1rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#scrollTopBtn:hover {
+  background: #341f97;
+  transform: scale(1.1);
+}
 
   </style>
 </head>
@@ -424,6 +445,7 @@
   </div>
 
   
+<button id="scrollTopBtn" title="উপর যান">⬆</button>
 
 
   <script>
@@ -505,6 +527,21 @@
   setInterval(updateCountdown, 1000);
   updateCountdown(); // Initial call
 </script>
+  <script>
+    // Show button when scrolling
+window.onscroll = () => {
+  const btn = document.getElementById("scrollTopBtn");
+  btn.style.display = (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100)
+    ? "block"
+    : "none";
+};
+
+// Smooth scroll to top
+document.getElementById("scrollTopBtn").onclick = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+  </script>
 
 </body>
 </html>
